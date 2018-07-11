@@ -9,8 +9,8 @@ h1{
   padding: 10%;
   background-color: blue;
 }
-#app{
-  margin-top:0;
+.app{
+  margin-top:2px;
   margin-left:20%;
   margin-right:20%;
   padding:5%;

@@ -9,8 +9,26 @@
   </head>
   <body>
 <h1>this is studing vue</h1>
-<div id="app">
+<div id="app" class="app">
   {{message}}
+</div>
+
+<div id="app2" class="app">
+   <span v-bind:title="message">
+     鼠标悬停几秒钟会出现绑定信息
+   </span>
+</div>
+
+<div class="app" id="app3">
+  <p v-if = "seen">You have seen me</p>
+</div>
+
+<div class="app" id="app4" style="text-align:left">
+  <ol>
+    <li v-for ='todo in todos'>
+      {{todo.text}}
+    </li>
+  </ol>
 </div>
 <script src="index.js"></script>
   </body>
