@@ -32,3 +32,45 @@ var app4 = new Vue({
   }
 })
 app4.todos.push({text:'At here,a new line.'})
+
+var app5 = new Vue({
+  el:'#app5',
+  data:{
+    message: 'hello Vue!'
+  },
+  methods:{
+    reverseMessage:function () {
+      this.message = this.message.split('').reverse('').join('')
+    }
+  }
+})
+
+var app6 = new Vue({
+  el:'#app6',
+  data:{
+    message:'hello Vue'
+  }
+})
+
+Vue.component('todo-item', {
+  props: ['todo'],
+  template: '<li style="text-align:left">{{ todo.text }}</li>'
+})
+
+var app7 = new Vue({
+  el: '#app7',
+  data: {
+    groceryList: [
+      { id: 0, text: '蔬菜' },
+      { id: 1, text: '奶酪' },
+      { id: 2, text: '随便其它什么人吃的东西' }
+    ]
+  }
+})
+
+Vue.component('item', {
+  template:'<li>this is the first Vue component</li>'
+})
+var app8 = new Vue({
+  el:'#app8'
+})
